@@ -1,12 +1,16 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// Импортируем ОБА роутера
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
 import ReportByDatePage from './ReportByDatePage';
-import PredictReport from './PredictReport'
+import PredictReport from './PredictReport';
+
 function App() {
+  // Проверяем спец. переменную, которую мы зададим при билде
+  // Если это GH Pages, используем HashRouter, иначе (Netlify/Local) - BrowserRouter
+  const Router = process.env.REACT_APP_ROUTER_TYPE === 'hash' ? HashRouter : BrowserRouter;
   return (
     <Router>
       <div>
@@ -26,3 +30,7 @@ function App() {
 }
 
 export default App;
+
+
+
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
