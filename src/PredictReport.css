@@ -1,0 +1,180 @@
+/* PredictReport.css */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: #fff;
+}
+
+.header {
+	background: linear-gradient(90deg, #bef1c3, #43d17e);
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo {
+	width: 200px;
+	height: auto;
+	margin-bottom: -15px;
+	margin-right: -35px;
+}
+
+.nav-bar {
+	display: flex;
+	gap: 0px;
+}
+
+.nav-button {
+	text-decoration: none;
+	background-color: #2ecc71;
+	color: white;
+	padding: 10px 20px 15px;
+	border-radius: 25px;
+	font-size: 18px;
+	font-weight: bold;
+	transition: background 0.3s;
+	vertical-align: center;
+	height: 20px;
+	margin-top: 55px;
+	margin-right: 10px;
+
+
+}
+
+.nav-button:hover,
+.nav-button.active {
+	background-color: #27ae60;
+}
+
+main {
+	flex: 1;
+	padding: 20px;
+	text-align: center;
+}
+
+.title {
+	font-size: 36px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	background: #f0f0f0;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	margin: 0 auto 20px;
+}
+
+.form label {
+	font-size: 18px;
+	font-weight: bold;
+	color: #444;
+	width: 100%;
+	text-align: left;
+}
+
+.form input,
+.form select,
+.form button {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.form button {
+	background-color: #2ecc71;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.3s;
+}
+
+.form button:hover {
+	background-color: #27ae60;
+}
+
+.map-wrapper {
+	margin: 10px 0;
+}
+
+.map-hint {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 5px;
+}
+
+.map-container {
+	height: 300px;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.leaflet-control-attribution a[href="https://leafletjs.com"] {
+	display: none !important;
+}
+
+.chart-container {
+	max-width: 800px;
+	margin: 20px auto;
+}
+
+.error-message {
+	background-color: #ffe6e6;
+	color: #cc0000;
+	border: 1px solid #cc0000;
+	padding: 15px;
+	border-radius: 10px;
+	font-size: 18px;
+	max-width: 500px;
+	margin: 20px auto;
+}
+
+.footer {
+	background-color: #eee;
+	text-align: center;
+	padding: 10px;
+	font-size: 14px;
+	color: #666;
+}
+
+/* Адаптивные стили для планшетов и телефонов */
+@media (max-width: 768px) {
+	.nav-bar {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.title {
+		font-size: 28px;
+	}
+
+	.nav-button {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.form {
+		padding: 15px;
+	}
+
+	.nav-button {
+		font-size: 16px;
+		padding: 8px 15px;
+	}
+}
